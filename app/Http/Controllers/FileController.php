@@ -49,4 +49,14 @@ class FileController extends Controller
     {
         return response()->download(storage_path('app/'.$file->location));
     }
+
+    public function delete(File $file)
+    {
+
+        Storage::delete($file->location);
+
+        $file->delete();
+
+        return redirect('home');
+    }
 }
