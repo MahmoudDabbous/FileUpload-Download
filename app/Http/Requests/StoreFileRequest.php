@@ -22,7 +22,7 @@ class StoreFileRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required|string',
+            'title' => 'required|string|unique:files,title',
             'file' => 'required|file|mimes:jpg,jpeg,bmp,png,doc,docx,csv,rtf,xlsx,xls,txt,pdf,zip',
             'type' => 'required|exists:types,id',
         ];
