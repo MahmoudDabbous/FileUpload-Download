@@ -1,4 +1,4 @@
 # To Start:
-Run ` composer install && npm run dev ` <br/>
+Run ` composer install && npm install ` <br/>
 Then `php artisan storage:link && php artisan migrate`<br/>
 Finally `php artisan serve` and `npm run dev`<br/>
